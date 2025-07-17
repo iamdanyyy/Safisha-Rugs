@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Safisha Rugs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="contact-links">
+        <a href="https://instagram.com/safisharugs" target="_blank" title="Instagram">
+          <img src="assets/instagram.png" alt="Instagram" class="contact-icon" width="24" height="24" />
+        </a>
+        <a href="https://wa.me/254700000000" target="_blank" title="WhatsApp">
+          <img src="assets/whatsapp.png" alt="WhatsApp" class="contact-icon" width="24" height="24" />
+        </a>
+        <a href="tel:+254700000000" title="Call">
+          <img src="assets/phone.png" alt="Call" class="contact-icon" width="24" height="24" />
+        </a>
+      </div>
+      <i class="fa-solid fa-broom navbar-brand-icon"></i>
+      <div class="navbar-logo">Safisha Rugs</div>
+      <ul class="navbar-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="navbar-toggle" id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="about-hero">
+    <div class="about-hero-overlay">
+      <h1>Learn more about us</h1>
+    </div>
+  </section>
+
+  <main class="about-main">
+    <section class="about-summary">
+      <h2>Our Operation</h2>
+      <p>Safisha Rugs is Kabarnet’s trusted partner for professional carpet, rug, and upholstery cleaning. We offer a seamless experience from free pickup to expert cleaning and prompt delivery. Our team uses modern equipment and eco-friendly products to ensure your home or business is fresh, healthy, and spotless. Whether you need domestic, commercial, or on-the-go cleaning, we’re here to serve you with a smile.</p>
+    </section>
+
+    <section class="about-why">
+      <h2>Why Choose Us?</h2>
+      <div class="about-why-cards">
+        <div class="about-why-card">
+          <div class="about-why-icon">🌟</div>
+          <h3>Quality</h3>
+          <p>We deliver outstanding results using safe, effective methods for every material and stain.</p>
+        </div>
+        <div class="about-why-card">
+          <div class="about-why-icon">⏱️</div>
+          <h3>Convenience</h3>
+          <p>Enjoy free pickup and delivery, flexible scheduling, and friendly service every step of the way.</p>
+        </div>
+        <div class="about-why-card">
+          <div class="about-why-icon">💸</div>
+          <h3>Affordable Prices</h3>
+          <p>Get premium cleaning at prices that fit your budget—no hidden fees, just honest value.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-stats">
+      <div class="about-stats-card">
+        <div class="about-stats-number">2020</div>
+        <div class="about-stats-label">Year Started</div>
+      </div>
+      <div class="about-stats-card">
+        <div class="about-stats-number">500+</div>
+        <div class="about-stats-label">Happy Clients</div>
+      </div>
+      <div class="about-stats-card">
+        <div class="about-stats-number">30+</div>
+        <div class="about-stats-label">Commercial Clients</div>
+      </div>
+    </section>
+
+    <section class="about-reviews">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <p>"Safisha Rugs exceeded my expectations! My carpets look and smell amazing. Highly recommended."</p>
+          <span>- Alice M., Kabarnet</span>
+        </div>
+        <div class="testimonial">
+          <p>"Very professional and convenient. The free pickup and delivery made everything so easy."</p>
+          <span>- Peter K., Kabarnet</span>
+        </div>
+        <div class="testimonial">
+          <p>"Great value for money and excellent customer service. Will use again!"</p>
+          <span>- Janet W., Kabarnet</span>
+        </div>
+        <button class="slider-btn prev">&#10094;</button>
+        <button class="slider-btn next">&#10095;</button>
+      </div>
+      <div class="about-cta">
+        <a href="#contact" class="btn-primary">Request a Free Pick Up</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-contacts">
+      <a href="tel:+254700000000">Call: +254 700 000 000</a> |
+      <a href="mailto:info@safisharugs.co.ke">Email: info@safisharugs.co.ke</a> |
+      <a href="https://wa.me/254700000000" target="_blank">WhatsApp</a>
+    </div>
+    <p>&copy; 2025 Safisha Rugs, Kabarnet. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Navbar toggle for mobile
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarLinks = document.querySelector('.navbar-links');
+    navbarToggle.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+      navbarToggle.classList.toggle('active');
+    });
+
+    // Simple testimonial slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+    let current = 0;
+
+    function showTestimonial(index) {
+      testimonials.forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(current);
+    });
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % testimonials.length;
+      showTestimonial(current);
+    });
+  </script>
+</body>
+</html> 

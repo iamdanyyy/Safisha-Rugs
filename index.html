@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safisha Rugs - Kabarnet</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="contact-links">
+        <a href="https://instagram.com/safisharugs" target="_blank" title="Instagram">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://wa.me/254700000000" target="_blank" title="WhatsApp">
+          <i class="fa-brands fa-whatsapp contact-icon"></i>
+        </a>
+        <a href="tel:+254700000000" title="Call">
+          <img src="assets/telephone.png" alt="Call" class="contact-icon" width="24" height="24" />
+        </a>
+      </div>
+      <i class="fa-solid fa-broom navbar-brand-icon"></i>
+      <div class="navbar-logo">Safisha Rugs</div>
+      <ul class="navbar-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="navbar-toggle" id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>We Bring Your Carpets Back to Life</h1>
+      <p>Welcome to Safisha Rugs, your trusted local carpet cleaning experts in Kabarnet. We specialize in deep cleaning carpets, sofas, and mattresses, ensuring a healthier, fresher home for you and your family.</p>
+      <a href="#contact" class="btn-primary">Request a Free Pick Up</a>
+    </div>
+  </header>
+
+  <section class="about-section" id="about">
+    <h2>What We Offer</h2>
+    <div class="about-types">
+      <div class="about-type about-type-domestic">
+        <h3>Domestic Cleaning</h3>
+        <p>Professional cleaning for homes, ensuring your family enjoys a clean and healthy environment.</p>
+      </div>
+      <div class="about-type about-type-commercial">
+        <h3>Commercial Cleaning</h3>
+        <p>Reliable cleaning services for offices, hotels, and businesses to maintain a spotless workplace.</p>
+      </div>
+      <div class="about-type about-type-passing-by">
+        <h3>Passing By Cleaning</h3>
+        <p>Quick, on-the-go cleaning for those who need fast and efficient service while passing through Kabarnet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="materials-section">
+    <h2>Materials We Handle</h2>
+    <div class="materials-list">
+      <div class="material-item">Wool Carpets</div>
+      <div class="material-item">Synthetic Carpets</div>
+      <div class="material-item">Persian Rugs</div>
+      <div class="material-item">Shaggy Rugs</div>
+      <div class="material-item">Sofas & Upholstery</div>
+      <div class="material-item">Mattresses</div>
+      <div class="material-item">Curtains</div>
+      <div class="material-item">Car Seats</div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <h2>How It Works</h2>
+    <div class="process-steps">
+      <div class="process-step process-step-1">
+        <div class="process-icon">📦</div>
+        <h3>Request Pick Up</h3>
+        <p>Contact us to schedule a free pick up at your convenience.</p>
+      </div>
+      <div class="process-step process-step-2">
+        <div class="process-icon">🧼</div>
+        <h3>Cleaning Processing</h3>
+        <p>We clean your items using safe, effective methods tailored to each material.</p>
+      </div>
+      <div class="process-step process-step-3">
+        <div class="process-icon">✅</div>
+        <h3>Done!</h3>
+        <p>Your items are delivered back to you, fresh and spotless.</p>
+      </div>
+    </div>
+    <div class="process-cta">
+      <a href="#contact" class="btn-primary">Request a Free Pick Up</a>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"Safisha Rugs did an amazing job on my carpets! They look brand new. Highly recommend their services."</p>
+        <span>- Mary K., Kabarnet</span>
+      </div>
+      <div class="testimonial">
+        <p>"Professional, friendly, and efficient. My sofa and mattress have never been cleaner!"</p>
+        <span>- John L., Kabarnet</span>
+      </div>
+      <div class="testimonial">
+        <p>"Booking was easy and the results were fantastic. Will definitely use Safisha Rugs again."</p>
+        <span>- Grace T., Kabarnet</span>
+      </div>
+      <button class="slider-btn prev">&#10094;</button>
+      <button class="slider-btn next">&#10095;</button>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-contacts">
+      <a href="tel:+254700000000">Call: +254 700 000 000</a> |
+      <a href="mailto:info@safisharugs.co.ke">Email: info@safisharugs.co.ke</a> |
+      <a href="https://wa.me/254700000000" target="_blank">WhatsApp</a>
+    </div>
+    <p>&copy; 2025 Safisha Rugs, Kabarnet. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Navbar toggle for mobile
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarLinks = document.querySelector('.navbar-links');
+    navbarToggle.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+      navbarToggle.classList.toggle('active');
+    });
+
+    // Simple testimonial slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+    let current = 0;
+
+    function showTestimonial(index) {
+      testimonials.forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(current);
+    });
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % testimonials.length;
+      showTestimonial(current);
+    });
+  </script>
+</body>
+</html> 
