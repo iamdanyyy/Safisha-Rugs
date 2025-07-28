@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+  <div class="custom-cursor"><div class="cursor-dot"></div></div>
   <nav class="navbar">
     <div class="navbar-container">
       <a href="index.html">
@@ -35,7 +36,7 @@
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
       <div class="navbar-toggle" id="navbar-toggle">
         <span></span>
@@ -235,6 +236,50 @@
     });
     // Add .in-view to trigger animation
     // .fade-in.in-view and .slide-up.in-view will have opacity:1 and animate in
+
+    // Animate custom cursor with advanced effects (teardrop, rotated -45deg, pointer tip at top-left)
+    const cursor = document.querySelector('.custom-cursor');
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
+
+    // Animate cursor position
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursor.style.opacity = 1;
+    });
+    function animateCursor() {
+      // The translate(-30%, -20%) in CSS means the tip is at top-left, so no -50%/-50% here
+      currentX += (mouseX - currentX) * 0.18;
+      currentY += (mouseY - currentY) * 0.18;
+      cursor.style.left = currentX + 'px';
+      cursor.style.top = currentY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hide cursor when leaving window
+    document.addEventListener('mouseleave', () => {
+      cursor.style.opacity = 0;
+    });
+    document.addEventListener('mouseenter', () => {
+      cursor.style.opacity = 1;
+    });
+
+    // Hover effect for interactive elements
+    const interactiveSelectors = 'a, button, input, textarea, select, [role="button"], .btn-primary, .btn-secondary';
+    document.querySelectorAll(interactiveSelectors).forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+    });
+
+    // Click animation
+    document.addEventListener('mousedown', () => {
+      cursor.classList.add('cursor-click');
+    });
+    cursor.addEventListener('animationend', () => {
+      cursor.classList.remove('cursor-click');
+    });
   </script>
 </body>
 </html> 
