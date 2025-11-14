@@ -1,5 +1,5 @@
 # Safisha Rugs
-[Live Deployment](https://github.com/iamdanyyy/Safisha-Rugs/)
+[Live Deployment](https://iamdanyyy.github.io/Safisha-Rugs/)
 
 Safisha Rugs is a modern, responsive website for a local carpet and upholstery cleaning business based in Kabarnet. The site showcases services, company information, and allows customers to send inquiries directly through a stylish contact form.
 
